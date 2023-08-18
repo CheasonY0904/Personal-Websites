@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Projects_Page</title>
+	<!--CSS引入-->
+	<link rel="stylesheet" href="css/Pro1_Style.css">
+	<!--js引入-->
+	<script src="js/animate.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/projects.js"></script>
+</head>
+
+<!--项目页面-->
+<body id="projects_page">
+	<!--返回顶部侧边栏-->
+	<div class="slider-bar">
+		<span class="goBack">
+			<a href="#top"><img src="img/Up.png" alt=""></a>
+		</span>
+	</div>
+	<!--页面头部颜色块-->
+	<div class="full_row_blank">&nbsp;</div>
+	<!--项目名称-->
+	<h1>基于U-Net的结直肠癌术前辅助诊断研究</h1>
+	<!--项目标签-->
+	<div class="tag_div">
+		<ul class="tags">
+			<li>&nbsp;#&nbsp;医学图像分割&nbsp;</li>
+			<li>&nbsp;#&nbsp;U-Net&nbsp;</li>
+			<li>&nbsp;#&nbsp;CV&nbsp;</li>
+		</ul>
+	</div>
+	<!--快速浏览层-->
+	<div class="overview">
+		<!--菜单目录-->
+		<div class="menu">
+			<ul>
+				<a href="#chapter1">
+					<li>1.&nbsp;项目简介</li>
+				</a>
+				<a href="#chapter2">
+					<li>2.&nbsp;资源要求</li>
+				</a>
+				<a href="#chapter3">
+					<li>3.&nbsp;项目内容</li>
+				</a>
+				<a href="#chapter4">
+					<li>4.&nbsp;核心代码</li>
+				</a>
+				<a href="#chapter5">
+					<li>5.&nbsp;项目总结</li>
+				</a>
+			</ul>
+		</div>
+		<!--滚图展示-->
+		<div class="img_show">
+			<!--核心滚动区域-->
+			<ul>
+				<li>
+					<img src="img/pro_img/pro1/1.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro1/2.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro1/3.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro1/4.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro1/5.png" alt="">
+				</li>
+			</ul>
+			<!--左箭头按钮-->
+			<a href="javascript:;" class="prev">👈</a>
+			<!--右箭头按钮-->
+			<a href="javascript:;" class="next">👉</a>
+			<!--小圆点-->
+			<ol class="img_navigation">
+				<!--等待动态生成-->
+			</ol>
+		</div>
+		<!--资源下载-->
+		<div class="menu">
+			<ul>
+				<a href="javascript:;">
+					<li>📚&nbsp;项目下载</li>
+				</a>
+				<a href="javascript:;">
+					<li>📄&nbsp;项目指南</li>
+				</a>
+				<a href="javascript:;">
+					<li>🔢&nbsp;数据下载</li>
+				</a>
+				<a href="javascript:;">
+					<li>🚀&nbsp;迁移学习</li>
+				</a>
+				<a href="mailto:3138891731@qq.com" target="_blank">
+					<li>📧&nbsp;联系作者</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<!--内容一-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter1" class="nav_font">
+					1. 项目简介
+				</font>
+			</div
+			><div class="nav_triangle">&nbsp;</div>
+		</div>
+		<div class="context shape1">
+			<div class="con_shape1">
+				<p>
+					本项目前身为本人于2021年3月加入湖南大学电气与信息工程学院刘敏教授实验室的校内创新项目课题。该课题由本人作为项目负责人，由实验室合作医院提供数据集和专业医生标注。旨在对<font color="#FF7500">结直肠癌</font>术前诊断阶段的医学图像进行精准的<font color="#FF7500">病变区域分割</font>以提高诊断的效力。
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--内容二-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter2" class="nav_font">
+					2. 资源要求
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape2">
+			<div class="con_shape2">
+				<ul>
+					<li>MindSpore&nbsp;1.0以上或pytorch&nbsp;1.10.0以上</li>
+					<li>8G以上的虚拟内存</li>
+					<li>*支持迁移学习</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--内容三-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter3" class="nav_font">
+					3. 项目内容
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape3">
+			<div class="con_shape3">
+				<p>
+					本项目首先对来自108位患者的共3057张原始数据进行了针对性的数据增强，即对有病变区域的少量样本进行了旋转变换，使在样本空间中有病变和无病变呈现6:4左右的分布。
+				</p><br>
+				<p>
+					其次，本项目利用MindSpore进行了模型的构建，数据流的打包和基于分层抽样的数据集划分。并基于此构建了训练代码。
+				</p><br>
+				<p>
+					最后，本项目在不采取预训练的前提下得到了准确率80%+的效果，仍有待改进。
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--内容四-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter4" class="nav_font">
+					4. 核心代码
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape4">
+			<div class="con_shape4">
+				<p>
+					下面对本项目的核心代码进行展示:
+				</p>
+				<br>
+				<p>
+					首先是数据预处理部分，该部分代码如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro1/code1.png" alt="" style="width: 600px; height: 400px;">
+				<br/>
+				<img src="img/pro_img/pro1/code2.png" alt="" style="width: 600px; height: 400px;">
+				<img src="img/pro_img/pro1/code3.png" alt="" style="width: 600px; height: 400px;">
+				<br>
+				<p>
+					接着是模型构建部分，该部分代码如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro1/code4.png" alt="" style="width: 600px; height: 400px;">
+				<br/>
+				<img src="img/pro_img/pro1/code5.png" alt="" style="width: 600px; height: 400px;">
+				<br>
+				<p>
+					最后是训练与验证部分，该部分代码如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro1/code6.png" alt="" style="width: 600px; height: 400px;">
+			</div>
+		</div>
+	</div>
+	<!--内容五-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter5" class="nav_font">
+					5. 项目总结
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape5">
+			<div class="con_shape5">
+				<p>
+					本项目是我接触深度学习的启蒙项目，也是我第一次接触CV中的图像分割问题。整体下来收益良多，但遗憾在欠缺打磨。因此于2023年暑假重拾该项目，以MindSpore框架重构了项目，并进行了全新的数据处理和训练。目前效果比结题时好很多了。后续还会持续跟进。
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

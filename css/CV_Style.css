@@ -1,0 +1,208 @@
+@charset "utf-8";
+/* CSS Document */
+/* 消除链接下划线 并设置Hover色 */
+a:link {
+  text-decoration: none;
+}
+a > font:link {
+  color: white;
+  text-decoration: none;
+}
+a > font:hover {
+  color: gold;
+  text-decoration: underline;
+}
+.full_row_blank {
+  width: 100%;
+}
+.bg_color_1 {
+  background-color: #2EDFA3;
+}
+/* 圆形头像 */
+.round_icon {
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  border-radius: 50%;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+/* 小图标尺寸 */
+.mini_icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 20%;
+}
+/* 内容居中层 */
+.center_div {
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 16rem;
+  line-height: 16rem;
+  margin: 0;
+}
+/* 居中span */
+.center_span {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+/* 居中头像 */
+.center_icon {
+  display: inline-block;
+}
+/* 字体样式集 */
+font {
+  font-family: "Microsoft YaHei", "Times New Roman", Cambria, "Hoefler Text", "Liberation Serif", Times, "serif";
+}
+/* 加粗字体 */
+.bold_font {
+  font-weight: 700;
+}
+/* 信息块 */
+.info_span {
+  width: 10rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+}
+/* 小块块 */
+.mini_span {
+  width: 1rem;
+  height: 2rem;
+  text-align: center;
+  display: inline-block;
+}
+/* 居右信息块 */
+.right_span {
+  text-align: right;
+}
+/* 校徽图片 */
+.school_icon {
+  width: 10rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+/* 居右文字 */
+.right_font {
+  text-align: right;
+}
+/* 居左文字 */
+.left_font {
+  text-align: left;
+  vertical-align: baseline;
+  display: inline-block;
+}
+/* 竖条span */
+.vertical_span {
+  background-color: #E3F9FD;
+  height: 2.5rem;
+  width: 1rem;
+  display: inline-block;
+}
+/* 信息导航条 */
+.nav_span {
+  background-color: #16A951;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 80rem;
+  display: inline-block;
+  text-align: left;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+/* 导航文字 */
+.nav_font {
+  text-align: start;
+  height: 2.5rem;
+  font-size: 1.6rem;
+  vertical-align: baseline;
+  color: white;
+}
+/* 导航条层左起放标签 */
+.nav_div {
+  text-align: center;
+}
+/* 目录层 */
+.menu_span {
+  background-color: #96CE54;
+  margin: 0px;
+  padding: 0px;
+  height: 6rem;
+  width: 81rem;
+  display: inline-block;
+  overflow: hidden;
+}
+/* 文本高度 */
+.context_1 {
+  height: 17rem;
+}
+.context_2 {
+  height: 28rem;
+}
+.context_3 {
+  height: 15rem;
+}
+.context_4 {
+  height: 88rem;
+}
+.context_5 {
+  height: 30rem;
+}
+.context_6 {
+  height: 18rem;
+}
+.context_7 {
+  height: 12rem;
+}
+/* 只居中层 */
+.center_place {
+  align-items: center;
+  text-align: center;
+}
+/* 菜单选项font */
+.menu_font {
+  width: 20rem;
+  display: flex;
+  color: white;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+/* 内容文本尺寸 */
+.context_font {
+  font-size: 1.2rem;
+  text-align: left;
+  color: whitesmoke;
+}
+/* 标签文本尺寸 */
+.tag_font {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: left;
+  color: gold;
+  background-color: rgba(124,122,78,0.7);	
+  border-radius: 5px;
+}
+/* 段落都从左起 */
+p {
+  text-align: left;
+}
+/* 左起展示信息的无序表 */
+.info_ul {
+  text-align: left;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+/* 无序表点改成星星 */
+ul li::marker {
+  content: "⭐";
+}
+/* li容器下间距 */
+li {
+  padding-bottom: 0.4rem;
+}

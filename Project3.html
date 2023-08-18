@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>Projects_Page</title>
+	<!--CSS引入-->
+	<link rel="stylesheet" href="css/Pro3_Style.css">
+	<!--js引入-->
+	<script src="js/animate.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/projects.js"></script>
+</head>
+
+<!--项目页面-->
+<body id="projects_page">
+	<!--返回顶部侧边栏-->
+	<div class="slider-bar">
+		<span class="goBack">
+			<a href="#top"><img src="img/Up.png" alt=""></a>
+		</span>
+	</div>
+	<!--页面头部颜色块-->
+	<div class="full_row_blank">&nbsp;</div>
+	<!--项目名称-->
+	<h1>基于CT107S和LCD12864的多功能电子锁</h1>
+	<!--项目标签-->
+	<div class="tag_div">
+		<ul class="tags">
+			<li>&nbsp;#&nbsp;嵌入式&nbsp;</li>
+			<li>&nbsp;#&nbsp;密码学&nbsp;</li>
+			<li>&nbsp;#&nbsp;动态规划&nbsp;</li>
+		</ul>
+	</div>
+	<!--快速浏览层-->
+	<div class="overview">
+		<!--菜单目录-->
+		<div class="menu">
+			<ul>
+				<a href="#chapter1">
+					<li>1.&nbsp;项目简介</li>
+				</a>
+				<a href="#chapter2">
+					<li>2.&nbsp;资源要求</li>
+				</a>
+				<a href="#chapter3">
+					<li>3.&nbsp;项目内容</li>
+				</a>
+				<a href="#chapter4">
+					<li>4.&nbsp;核心代码</li>
+				</a>
+				<a href="#chapter5">
+					<li>5.&nbsp;项目总结</li>
+				</a>
+			</ul>
+		</div>
+		<!--滚图展示-->
+		<div class="img_show">
+			<!--核心滚动区域-->
+			<ul>
+				<li>
+					<img src="img/pro_img/pro3/1.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro3/2.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro3/3.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro3/4.png" alt="">
+				</li>
+				<li>
+					<img src="img/pro_img/pro3/5.png" alt="">
+				</li>
+			</ul>
+			<!--左箭头按钮-->
+			<a href="javascript:;" class="prev">👈</a>
+			<!--右箭头按钮-->
+			<a href="javascript:;" class="next">👉</a>
+			<!--小圆点-->
+			<ol class="img_navigation">
+				<!--等待动态生成-->
+			</ol>
+		</div>
+		<!--资源下载-->
+		<div class="menu">
+			<ul>
+				<a href="javascript:;">
+					<li>📚&nbsp;项目下载</li>
+				</a>
+				<a href="javascript:;">
+					<li>📄&nbsp;项目指南</li>
+				</a>
+				<a href="javascript:;">
+					<li>🔢&nbsp;数据下载</li>
+				</a>
+				<a href="javascript:;">
+					<li>🚀&nbsp;迁移学习</li>
+				</a>
+				<a href="mailto:3138891731@qq.com" target="_blank">
+					<li>📧&nbsp;联系作者</li>
+				</a>
+			</ul>
+		</div>
+	</div>
+	<!--内容一-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter1" class="nav_font">
+					1. 项目简介
+				</font>
+			</div
+			><div class="nav_triangle">&nbsp;</div>
+		</div>
+		<div class="context shape1">
+			<div class="con_shape1">
+				<p>
+					本项目为本人在大三下的核心课程《微机原理综合设计》中的作品，并取得了93分的最高分。该项目是基于蓝桥杯开发板CT107S以及液晶显示屏LCD12864并采用C语言进行开发的。最终得到了一款实现了<font color="#FF7500">虚位密码</font>、<font color="#FF7500">子串匹配密码</font>、<font color="#FF7500">检测恶意输入行为</font>、<font color="#FF7500">时间显示和校准</font>等多种功能的电子锁。
+				</p>
+			</div>
+		</div>
+	</div>
+	<!--内容二-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter2" class="nav_font">
+					2. 资源要求
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape2">
+			<div class="con_shape2">
+				<ul>
+					<li>CT107S开发板一块</li>
+					<li>LCD12864液晶显示屏一块</li>
+					<li>杜邦线若干</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--内容三-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter3" class="nav_font">
+					3. 项目内容
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape3">
+			<div class="con_shape3">
+				<p>
+					首先，本项目对开发板的硬件资源进行了规划和分配如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro3/tab1.png" alt="">
+				<img src="img/pro_img/pro3/tab2.png" alt="">
+				<br/><br/>
+				<p>
+					本项目通过如上区域划分的 4*4 矩阵键盘实现了密码字符的输入、退格、确认、设置等功能，并通过 shift 键实现字母复用输入。不仅如此，长按Shift后直接进入字母输入模式，再按一次退出。对于键盘事件的处理主要按照如下流程图进行:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro3/tab3.png" alt="" style="height: 600px;">
+				<br/><br/>
+				<p>
+					紧接着本项目按照<strong>页面栈</strong>的原理进行页面的搭建和管理，共有如下几个父级界面:
+				</p>
+				<ul>
+					<li>锁定界面</li>
+					<li>解锁界面</li>
+					<li>设置界面</li>
+				</ul>
+				<p>
+					其中设置页面又与其多级子页面形成如下树形结构关系:
+				</p>
+				<br>
+				<p>
+					-设置界面
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;-密码设置界面
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-密码匹配模式修改界面
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-密码内容修改界面
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;-时间校准界面
+				</p>
+				<br>
+				<p>
+					本项目的创新点在于提出了一种更富有冗余性的密码匹配模式——子串匹配模式，即在正确密码除头尾的任意两字符间插入其他字符也可正确匹配。假定我们的密码是<em>123456</em>，给出样例如下:
+				</p>
+				<ul>
+					<li>
+						<font color="red">1</font>22<font color="red">2</font><font color="red">3</font><font color="red">4</font><font color="red">5</font><font color="red">6</font>&nbsp;&nbsp;&nbsp;&nbsp;✅
+					</li>
+					<li>
+						<font color="red">1</font>AB<font color="red">2</font><font color="red">3</font>9<font color="red">4</font><font color="red">5</font>7<font color="red">6</font>&nbsp;&nbsp;&nbsp;&nbsp;✅
+					</li>
+					<li>
+						<font color="red">1</font>222<font color="red">2</font><font color="red">3</font><font color="red">4</font><font color="red">5</font><font color="red">6</font>&nbsp;&nbsp;&nbsp;&nbsp;❌
+					</li>
+				</ul>
+				<p>
+					该匹配算法的实现通过<strong>动态规划</strong>并辅以<strong>滚动数组优化空间</strong>实现。具体思路和递推公式如下:
+				</p>
+				<img src="img/pro_img/pro3/tab4.png" style="width: 800px;height: 400px;" alt="">
+				<p>
+					其中&nbsp;<em>tail</em>&nbsp;为正在进行校验匹配的密码索引，它是一个动态指标，由于冗余性的存在，它需要每遍历3位输入更新一次，因为第&nbsp;<em>i</em>&nbsp;位的密码有三个可能性位置。
+				</p>
+				<p>
+					综上，该智能锁的整体运行逻辑流程图如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro3/tab5.png" alt="" style="height: 500px;">
+				<br/><br/>
+			</div>
+		</div>
+	</div>
+	<!--内容四-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter4" class="nav_font">
+					4. 核心代码
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape4">
+			<div class="con_shape4">
+				<p>
+					下面对本项目的核心代码进行展示:
+				</p>
+				<br>
+				<p id="Password_Match">
+					本项目最核心的部分是动态规划实习的子串密码匹配，该部分代码如下:
+				</p>
+				<br/>
+				<img src="img/pro_img/pro3/code1.png" alt="" style="width: 600px; height: 400px;">
+				<br/>
+				<img src="img/pro_img/pro3/code2.png" alt="" style="width: 600px; height: 400px;">
+			</div>
+		</div>
+	</div>
+	<!--内容五-->
+	<div class="paragraph">
+		<div class="title_bar">
+			<div class="nav_bar">
+				<font id="chapter5" class="nav_font">
+					5. 项目总结
+				</font>
+			</div
+			><div class="nav_triangle"></div>
+		</div>
+		<div class="context shape5">
+			<div class="con_shape5">
+				<p>
+					在本设计中本人主要担任<strong>功能设计、模块分配、算法设计、代码编写、硬件调试</strong>等工作。
+				</p>
+				<br/>
+				<p>
+					整个设计和实现过程磕磕绊绊，从最初的点灯到折磨了我几个夜晚的点LCD——从一开始的delay函数频率不对齐问题（电赛便遇到过的老毛病）到最后的对比度问题。硬件和代码的联调对我而言就两个字——<strong>折磨</strong>。
+				</p>
+				<br/>
+				<p>
+					我是一个立志做&nbsp;<em>AI</em>&nbsp;研究和算法研究的&nbsp;<strong>特别特别特别“软”</strong>&nbsp;的自动化学生，这倒也没有那么稀奇了，不过对于天天浸淫在<strong>上位机和服务器的高级算力和存储资源</strong>的我来说，刚上手CT107S便被数据内存分配打了个措手不及。好在STC15F2K60S2的<strong>外部存储空间</strong>还是非常充足的，以至于后来的所有变量我都用了<strong>xdata</strong>进行声明，甚至函数中的临时变量亦是如此。
+				</p>
+				<br/>
+				<p>
+					而这样提心吊胆地用着存储空间的日子也让我深刻反思了不少——在进行算法设计编程时，我们常常讲<strong>空间复杂度优化</strong>，简称<strong>空间优化</strong>。但其实这一优化的对象一般是指<strong>代码中对重复计算数据的大量重复存储</strong>。回看自己在LeetCode、PTA、CSP上刷算法题时的代码，不禁让我后怕——到处都是&nbsp;<strong><em>int</em></strong>&nbsp;、&nbsp;<strong><em>double</em></strong>&nbsp;等字长很长甚至最长的变量类型声明。生动一点说，就好比如今的我突然回到50年代生活了一段时间。这样质朴与和存储空间勾心斗角的生活教会了我很多很多，比如C51单片机中不能够引用二值变量&nbsp;<strong><em>bool</em></strong>&nbsp;，但可以通过&nbsp;<strong><em>bit</em></strong>&nbsp;直接进行<strong>位声明、位操作</strong>，其实&nbsp;<strong><em>bool</em></strong>&nbsp;本质上也只是一个单独的二进制位。再比如从寄存器的各种标志位信息存储可以学会将多种二值标志位放到<strong>一个字节</strong>中进行存储，然后用<strong>与、或</strong>等逻辑操作进行值的读写。（虽然实际赶工时没有怎么用到，如果时间充足，这方面我是非常希望能下功夫编排和整理的）
+				</p>
+				<br>
+				<p>
+					存储空间交给我的不仅仅是上面这些，上面只是单片机中<strong>数据存储</strong>的部分，既幸运也不幸的是，我还在程序存储上遇到了大麻烦。当我的代码长度来到2K时，Keil5突然报错说代码长度超限，不允许编译。这吓得我急出一身冷汗，也顺便让我傻到忘记了STC15F2K60S2的程序Flash是有60K的！！！
+				</p>
+				<br>
+				<p>
+					这时以为是真的代码太长装不下的我开始了疯狂优化代码，从<strong>逻辑合并</strong>到设置里打开<strong>顶级代码优化</strong>，最后努力到不加上时间更新函数能够恰好够着2K的限制。当然最后恍然大悟我有60K空间的时候才回过头解决了Keil5(bushi)，装过了一个C51版本的Keil5并破解后便可以正常编译了。写下这些感想时的我还差时间校准模块的代码没完成，此时的程序存储空间已经使用了6017B，块6K了。
+				</p>
+				<br>
+				<p>
+					依旧顺着代码长度，这次的设计中非常遗憾的是没有能够很好地进行模块化，后面的很多功能都直接堆进&nbsp;<strong><em>main.c</em></strong>&nbsp;里了，导致其内容有上千行。不过倒也应付的过来，后续有时间的化要好好优化和封装一下。（曾经打电赛时我嫌标准库代码长还疯狂进行了封装，当时做的LED翻页多功能选择模块也封装地非常好，到底还是太自信了，拖到最后才来通宵弄哈哈哈哈哈）
+				</p>
+				<br>
+				<p>
+					当然，这次也用到了很多很多偏&nbsp;<strong>“软件”</strong>&nbsp;的知识，这就比较富有我的个人特色了哈哈哈。从<strong>页面栈</strong>到<strong>动规解算密码</strong>，从<strong>前端架构</strong>到<strong>后端算法</strong>，从<strong>百草园</strong>杀到<strong>三味书屋</strong>，属于是梦幻联动了，我<strong>非常满意和自豪</strong>！！！
+				</p>
+				<br>
+				<p>
+					说到这里的动态规划又不得不提到给出了诸多宝贵意见的<strong>我的女朋友</strong>——<strong>金统院2019级的程莹同学</strong>，在此特别致谢程莹同学。
+				</p>
+				<br>
+				<p>
+					她在设计之初便带领我查阅资料文献最终为密码匹配模式提出了两点宝贵意见:
+				</p>
+				<ul>
+					<li>参考阿里、腾讯等龙头企业正使用中的<strong>虚位密码</strong>模式</li>
+					<li>在其思路上扩展，可以<strong>通过两个正确字符间塞入一些字符来混淆和保护</strong>，同时莹莹提到了当时我学习动规时在力扣上刷到的<strong>子字符串匹配</strong>，借鉴该思路我们创新地（创不创新不确定，如有雷同算前人狗屎运好）得到了密码匹配模式3——<strong>子串实现模式</strong></li>
+				</ul>
+				<p>
+					其实在拿到单片机之初便有了大概构想，直到最后磕磕绊绊地实现才发现自己仍有诸多不足，比如一开始一天埋头钻研的矩阵键盘，<strong>例程中的思路是按下后便一直响应该按钮的事件</strong>，<strong>即当前数码管显示的是上一次按下的按键代表的信息</strong>。这和密码输入是很不一样的，因为本设计采用了<strong>全中断编程</strong>，即所有操作挂载在1ms一次的<strong>定时器中断服务函数</strong>中，若按照例程逻辑，则按下按键1后电子锁将认为你<strong>每一毫秒都输入了一个1</strong>直到你输入下一个数。因此按键输入处理单独拎出来在第一章中的设计中细说了思路并附上了大概的流程图。
+				</p>
+				<br>
+				<p>
+					这次设计下来的收获当然远不止这些，比如各个模式的转换用到了类似于<strong>数电</strong>课程中学过的<strong>状态机</strong>的概念，本设计其实就是一个大号的<strong>状态机</strong>。不仅如此，为了体验一把<strong>硬件设计师</strong>的快感，本报告中的所有原理图、流程图均为本人自学&nbsp;<strong><em>Adobe Illustrator</em></strong>&nbsp;亲手绘制的，奇怪的知识增加了。
+				</p>
+				<br>
+				<p>
+					像这样的恍悟和新知数不胜数，但是至此我却已然不知所言。
+				</p>
+				<br>
+				<p>
+					非常感谢指导老师王亚老师上个学期对单片机知识的传授以及本次设计中对我特殊情况的包容。
+				</p>
+				<br>
+				<p>
+					最后再次鸣谢<strong>程莹同学</strong>陪我度过的不知多少个为了本设计不眠不休的夜晚。
+				</p>
+				<br>
+				<p>
+					行文且已尽，求知尚无垠。
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
